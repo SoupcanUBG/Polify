@@ -23,6 +23,12 @@ class PolifyMod extends PolyMod {
                 SettingType.BOOL,
                 true
             );
+            pml.registerSetting(
+                "Notification Timeout",
+                "polifytimeout",
+                SettingType.SLIDER,
+                3
+            );
 
             pml.registerSetting(
                 "Transition type",
@@ -251,7 +257,7 @@ class PolifyMod extends PolyMod {
                     popup.style.transform = "";
                 }
 
-            }, 2000);
+            }, pml.getSetting("polifytimeout") * 1000);
         });
     }
 }
