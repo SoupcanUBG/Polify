@@ -7,7 +7,6 @@ class PolifyMod extends PolyMod {
         super();
 
         this.init = async (pml) => {
-            // Register Settings
             pml.registerSettingCategory("Polify");
 
             pml.registerSetting(
