@@ -1,27 +1,28 @@
 Polify
 
-please help me find a better name
+<sub>please help me find a better name</sub>
 Import Url
-
+```
 https://cdn.polymodloader.com/gh/SoupcanUBG/Polify/main/
-
-Tutorial
+```
+## Tutorial
 
 Basically because of how the mod grabs your spotify status, PML by itself is not going to work so some files from inside the game must be edited to make it work
 
 There are 3 ways to do so
-4 but idrc about compressing the entire of polymodloader including the executable and stuff for each platform so yeah
+
+<sub>4 but idrc about compressing the entire of polymodloader including the executable and stuff for each platform so yeah</sub>
 Download Game Code Updated
 
-    Download the app.asar file
+ 1.   Download the app.asar file
 
-    Then go to where the PolyTrack executable is and then enter the folder called "resources" there you should see a file called app.asar
+ 2.  Then go to where the PolyTrack executable is and then enter the folder called "resources" there you should see a file called app.asar
 
-    Rename the app.asar to backup.asar or whatever else but it cant be app.asar
+ 3.   Rename the app.asar to backup.asar or whatever else but it cant be app.asar
 
-    After that move the app.asar you downloaded to that directory effectly backing up the old file and then replacing it with this one
+ 4.   After that move the app.asar you downloaded to that directory effectly backing up the old file and then replacing it with this one
 
-    Done! But remember to import the Polify Mod
+ 5.  Done! But remember to import the Polify Mod
 
 Update 1 folder from the game code
 
