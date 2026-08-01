@@ -16,13 +16,13 @@ There are 3 ways to do so
 
 ### Download Game Code <sub>imo the easiest option</sub>
 
- 1.   Download the app.asar file
+ 1.  Download the app.asar file
 
  2.  Then go to where the PolyTrack executable is and then enter the folder called "resources" there you should see a file called app.asar
 
- 3.   Rename the app.asar to backup.asar or whatever else but it cant be app.asar
+ 3.  Rename the app.asar to backup.asar or whatever else but it cant be app.asar
 
- 4.   After that move the app.asar you downloaded to that directory effectly backing up the old file and then replacing it with this one
+ 4.  After that move the app.asar you downloaded to that directory effectly backing up the old file and then replacing it with this one
 
  5.  Done! But remember to import the Polify Mod
 
@@ -38,7 +38,7 @@ There are 3 ways to do so
 
  5.  Extract it to a folder called app using the asar tool it can be extracted to whatever folder name you want it doesn't matter
 
- 6.  after you've got the extracted folder enter it and then delete the folder called "electron" and replace it with the extracted zip you downloaded earlier
+ 6.  After you've got the extracted folder enter it and then delete the folder called "electron" and replace it with the extracted zip you downloaded earlier
 
  7.  Rename the original app.asar to anything else I suggest backup.asar
 
@@ -48,41 +48,41 @@ There are 3 ways to do so
 
 ### Manual
 
-    Download the spotify.bundle.js
+ 1.  Download the spotify.bundle.js
 
-    If you don't already have it installed, install a tool called asar
+ 2.  If you don't already have it installed, install a tool called asar
 
-    Go to where the PolyTrack executable is and then enter the folder called "resources" there you should see a file called app.asar
+ 3.  Go to where the PolyTrack executable is and then enter the folder called "resources" there you should see a file called app.asar
 
-    Extract it to a folder called app using the asar tool it can be extracted to whatever folder name you want it doesn't matter
+ 4.  Extract it to a folder called app using the asar tool it can be extracted to whatever folder name you want it doesn't matter
 
-    after you've got the extracted folder enter it and then go into electron/ and place the spotify.bundle.js in there it should be in the same folder as preload.js and main.js
+ 5.  After you've got the extracted folder enter it and then go into electron/ and place the spotify.bundle.js in there it should be in the same folder as preload.js and main.js
 
-    Edit main.js and add these things:
+ 6.  Edit main.js and add these things:
 
-Add const path = require("path"), { startSpotifyWatcher, stopSpotifyWatcher } = require("./spotify.bundle.js"); on the second line so it should look like this:
-
+`Add const path = require("path"), { startSpotifyWatcher, stopSpotifyWatcher } = require("./spotify.bundle.js");` on the second line so it should look like this:
+```
 const { app, BrowserWindow, session, shell, ipcMain } = require("electron"),
 const path = require("path"), { startSpotifyWatcher, stopSpotifyWatcher } = require("./spotify.bundle.js");
 
 let browserWindow = null;
 
 const singleInstanceLockSucessful = app.requestSingleInstanceLock();
-
-then add stopSpotifyWatcher(); after in:
-
+```
+then add `stopSpotifyWatcher();` after in:
+```
  ipcMain.on("quit", () => {
     app.quit();
   }),
-
+```
 and
-
+```
   app.on("window-all-closed", () => {
     app.quit();
   }),
-
+```
 like this:
-
+```
 ipcMain.on("get-pml-port", (e) => {
     const portArg = process.argv.find((arg) => arg.startsWith("--pml-port="));
     e.returnValue = portArg ? portArg.split("=")[1] : null;
@@ -99,21 +99,21 @@ ipcMain.on("get-pml-port", (e) => {
     app.quit();
   }),
   app.whenReady().then(() => {
-
+```
 Now for the preload.js
 
 Simply add:
-
+```
  onSpotifySongChange: (callback) => {
    ipcRenderer.on("spotify-song-change", (_, song) => {
      callback(song);
    });
  },
-
-after getHelperPort: () => ipcRenderer.sendSync("get-pml-port"),
+```
+after `getHelperPort: () => ipcRenderer.sendSync("get-pml-port"),`
 
 due to the file being small and few lines you can just replace the file with this
-
+```
 const { contextBridge, ipcRenderer } = require("electron");
 
 contextBridge.exposeInMainWorld("electron", {
@@ -139,6 +139,6 @@ contextBridge.exposeInMainWorld("electron", {
     });
   },
 });
-
-Also credits to Jakob for like all of the PML Code xD
-He made this but for Apple Music but fully PML Compatible go check it out here
+```
+Also credits to [Jakob](https://crjakob.com/) for like all of the PML Code xD
+He made this but for Apple Music but fully PML Compatible go check it out [here](https://git.polymodloader.com/Jakob/NowPlaying/src/branch/main)
