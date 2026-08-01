@@ -11,7 +11,8 @@ Basically because of how the mod grabs your spotify status, PML by itself is not
 
 There are 3 ways to do so
 <sub>4 but idrc about compressing the entire of polymodloader including the executable and stuff for each platform so yeah</sub>
-Download Game Code Updated
+
+### Download Game Code <sub>imo the easiest option</sub>
 
  1.   Download the app.asar file
 
@@ -23,27 +24,27 @@ Download Game Code Updated
 
  5.  Done! But remember to import the Polify Mod
 
-Update 1 folder from the game code
+### Update 1 folder from the game code
 
-    Download the electron.zip file
+ 1.  Download the electron.zip file
 
-    Extract the zip file to wherever you want I suggest "Desktop"
+ 2.  Extract the zip file to wherever you want I suggest "Desktop"
 
-    If you don't already have it installed, install a tool called asar
+ 3.  If you don't already have it installed, install a tool called asar
 
-    Go to where the PolyTrack executable is and then enter the folder called "resources" there you should see a file called app.asar
+ 4.  Go to where the PolyTrack executable is and then enter the folder called "resources" there you should see a file called app.asar
 
-    Extract it to a folder called app using the asar tool it can be extracted to whatever folder name you want it doesn't matter
+ 5.  Extract it to a folder called app using the asar tool it can be extracted to whatever folder name you want it doesn't matter
 
-    after you've got the extracted folder enter it and then delete the folder called "electron" and replace it with the extracted zip you downloaded earlier
+ 6.  after you've got the extracted folder enter it and then delete the folder called "electron" and replace it with the extracted zip you downloaded earlier
 
-    Rename the original app.asar to anything else I suggest backup.asar
+ 7.  Rename the original app.asar to anything else I suggest backup.asar
 
-    Compress the folder you made after extracting the app.asar back into an app.asar
+ 8.  Compress the folder you made after extracting the app.asar back into an app.asar
 
-    Done! But remember to import the Polify Mod
+ 9.  Done! But remember to import the Polify Mod
 
-Manual
+### Manual
 
     Download the spotify.bundle.js
 
