@@ -1,7 +1,7 @@
 Polify
-
 <sub>please help me find a better name</sub>
-Import Url
+
+## Import Url
 ```
 https://cdn.polymodloader.com/gh/SoupcanUBG/Polify/main/
 ```
@@ -10,7 +10,6 @@ https://cdn.polymodloader.com/gh/SoupcanUBG/Polify/main/
 Basically because of how the mod grabs your spotify status, PML by itself is not going to work so some files from inside the game must be edited to make it work
 
 There are 3 ways to do so
-
 <sub>4 but idrc about compressing the entire of polymodloader including the executable and stuff for each platform so yeah</sub>
 Download Game Code Updated
 
